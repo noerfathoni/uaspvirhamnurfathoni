@@ -23,20 +23,20 @@ Partial Class MainApp
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MyContact = New System.Windows.Forms.Label()
         Me.AboutBtn = New System.Windows.Forms.Button()
         Me.ExitBtn = New System.Windows.Forms.Button()
         Me.ExportImportBtn = New System.Windows.Forms.Button()
         Me.ContactBtn = New System.Windows.Forms.Button()
         Me.GroupBtn = New System.Windows.Forms.Button()
-        Me.DashboardBtn = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ContactCreate1 = New UASIrhamNoer.ContactCreate()
-        Me.DashboardView1 = New UASIrhamNoer.DashboardView()
         Me.ContactsView1 = New UASIrhamNoer.ContactsView()
         Me.ExportImportView1 = New UASIrhamNoer.ExportImportView()
         Me.GroupsView1 = New UASIrhamNoer.GroupsView()
         Me.AboutView1 = New UASIrhamNoer.AboutView()
         Me.ContactDetailView1 = New UASIrhamNoer.ContactDetailView()
+        Me.ContactCreate1 = New UASIrhamNoer.ContactForm()
+        Me.GroupForm1 = New UASIrhamNoer.GroupForm()
         Me.Panel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -44,16 +44,27 @@ Partial Class MainApp
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Panel1.Controls.Add(Me.MyContact)
         Me.Panel1.Controls.Add(Me.AboutBtn)
         Me.Panel1.Controls.Add(Me.ExitBtn)
         Me.Panel1.Controls.Add(Me.ExportImportBtn)
         Me.Panel1.Controls.Add(Me.ContactBtn)
         Me.Panel1.Controls.Add(Me.GroupBtn)
-        Me.Panel1.Controls.Add(Me.DashboardBtn)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(150, 553)
         Me.Panel1.TabIndex = 0
+        '
+        'MyContact
+        '
+        Me.MyContact.AutoSize = True
+        Me.MyContact.Font = New System.Drawing.Font("Nunito", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MyContact.ForeColor = System.Drawing.Color.White
+        Me.MyContact.Location = New System.Drawing.Point(6, 30)
+        Me.MyContact.Name = "MyContact"
+        Me.MyContact.Size = New System.Drawing.Size(129, 32)
+        Me.MyContact.TabIndex = 6
+        Me.MyContact.Text = "MyContact"
         '
         'AboutBtn
         '
@@ -61,7 +72,7 @@ Partial Class MainApp
         Me.AboutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AboutBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AboutBtn.ForeColor = System.Drawing.Color.White
-        Me.AboutBtn.Location = New System.Drawing.Point(0, 339)
+        Me.AboutBtn.Location = New System.Drawing.Point(0, 265)
         Me.AboutBtn.Name = "AboutBtn"
         Me.AboutBtn.Size = New System.Drawing.Size(150, 50)
         Me.AboutBtn.TabIndex = 5
@@ -75,7 +86,7 @@ Partial Class MainApp
         Me.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExitBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExitBtn.ForeColor = System.Drawing.Color.White
-        Me.ExitBtn.Location = New System.Drawing.Point(0, 395)
+        Me.ExitBtn.Location = New System.Drawing.Point(0, 321)
         Me.ExitBtn.Name = "ExitBtn"
         Me.ExitBtn.Size = New System.Drawing.Size(150, 50)
         Me.ExitBtn.TabIndex = 4
@@ -89,7 +100,7 @@ Partial Class MainApp
         Me.ExportImportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExportImportBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExportImportBtn.ForeColor = System.Drawing.Color.White
-        Me.ExportImportBtn.Location = New System.Drawing.Point(0, 283)
+        Me.ExportImportBtn.Location = New System.Drawing.Point(0, 209)
         Me.ExportImportBtn.Name = "ExportImportBtn"
         Me.ExportImportBtn.Size = New System.Drawing.Size(150, 50)
         Me.ExportImportBtn.TabIndex = 3
@@ -103,7 +114,7 @@ Partial Class MainApp
         Me.ContactBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ContactBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ContactBtn.ForeColor = System.Drawing.Color.White
-        Me.ContactBtn.Location = New System.Drawing.Point(0, 171)
+        Me.ContactBtn.Location = New System.Drawing.Point(0, 97)
         Me.ContactBtn.Name = "ContactBtn"
         Me.ContactBtn.Size = New System.Drawing.Size(150, 50)
         Me.ContactBtn.TabIndex = 2
@@ -117,7 +128,7 @@ Partial Class MainApp
         Me.GroupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBtn.ForeColor = System.Drawing.Color.White
-        Me.GroupBtn.Location = New System.Drawing.Point(0, 227)
+        Me.GroupBtn.Location = New System.Drawing.Point(0, 153)
         Me.GroupBtn.Name = "GroupBtn"
         Me.GroupBtn.Size = New System.Drawing.Size(150, 50)
         Me.GroupBtn.TabIndex = 1
@@ -125,82 +136,68 @@ Partial Class MainApp
         Me.GroupBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.GroupBtn.UseVisualStyleBackColor = True
         '
-        'DashboardBtn
-        '
-        Me.DashboardBtn.FlatAppearance.BorderSize = 0
-        Me.DashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DashboardBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DashboardBtn.ForeColor = System.Drawing.Color.White
-        Me.DashboardBtn.Location = New System.Drawing.Point(0, 115)
-        Me.DashboardBtn.Name = "DashboardBtn"
-        Me.DashboardBtn.Size = New System.Drawing.Size(150, 50)
-        Me.DashboardBtn.TabIndex = 0
-        Me.DashboardBtn.Text = "Dashboard"
-        Me.DashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DashboardBtn.UseVisualStyleBackColor = True
-        '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.DashboardView1)
         Me.FlowLayoutPanel1.Controls.Add(Me.ContactsView1)
         Me.FlowLayoutPanel1.Controls.Add(Me.ExportImportView1)
         Me.FlowLayoutPanel1.Controls.Add(Me.GroupsView1)
         Me.FlowLayoutPanel1.Controls.Add(Me.AboutView1)
         Me.FlowLayoutPanel1.Controls.Add(Me.ContactDetailView1)
         Me.FlowLayoutPanel1.Controls.Add(Me.ContactCreate1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.GroupForm1)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(152, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(628, 553)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
-        'ContactCreate1
-        '
-        Me.ContactCreate1.Location = New System.Drawing.Point(3, 3357)
-        Me.ContactCreate1.Name = "ContactCreate1"
-        Me.ContactCreate1.Size = New System.Drawing.Size(628, 553)
-        Me.ContactCreate1.TabIndex = 6
-        '
-        'DashboardView1
-        '
-        Me.DashboardView1.Location = New System.Drawing.Point(3, 3)
-        Me.DashboardView1.Name = "DashboardView1"
-        Me.DashboardView1.Size = New System.Drawing.Size(628, 553)
-        Me.DashboardView1.TabIndex = 0
-        '
         'ContactsView1
         '
-        Me.ContactsView1.Location = New System.Drawing.Point(3, 562)
+        Me.ContactsView1.Location = New System.Drawing.Point(3, 3)
         Me.ContactsView1.Name = "ContactsView1"
         Me.ContactsView1.Size = New System.Drawing.Size(628, 553)
         Me.ContactsView1.TabIndex = 4
         '
         'ExportImportView1
         '
-        Me.ExportImportView1.Location = New System.Drawing.Point(3, 1121)
+        Me.ExportImportView1.Location = New System.Drawing.Point(3, 562)
         Me.ExportImportView1.Name = "ExportImportView1"
         Me.ExportImportView1.Size = New System.Drawing.Size(628, 553)
         Me.ExportImportView1.TabIndex = 3
         '
         'GroupsView1
         '
-        Me.GroupsView1.Location = New System.Drawing.Point(3, 1680)
+        Me.GroupsView1.Location = New System.Drawing.Point(3, 1121)
         Me.GroupsView1.Name = "GroupsView1"
         Me.GroupsView1.Size = New System.Drawing.Size(628, 553)
         Me.GroupsView1.TabIndex = 2
         '
         'AboutView1
         '
-        Me.AboutView1.Location = New System.Drawing.Point(3, 2239)
+        Me.AboutView1.Location = New System.Drawing.Point(3, 1680)
         Me.AboutView1.Name = "AboutView1"
         Me.AboutView1.Size = New System.Drawing.Size(628, 553)
         Me.AboutView1.TabIndex = 1
         '
         'ContactDetailView1
         '
-        Me.ContactDetailView1.Location = New System.Drawing.Point(3, 2798)
+        Me.ContactDetailView1.Location = New System.Drawing.Point(3, 2239)
         Me.ContactDetailView1.Name = "ContactDetailView1"
         Me.ContactDetailView1.Size = New System.Drawing.Size(628, 553)
         Me.ContactDetailView1.TabIndex = 5
+        '
+        'ContactCreate1
+        '
+        Me.ContactCreate1.Location = New System.Drawing.Point(3, 2798)
+        Me.ContactCreate1.Name = "ContactCreate1"
+        Me.ContactCreate1.Size = New System.Drawing.Size(628, 553)
+        Me.ContactCreate1.TabIndex = 6
+        '
+        'GroupForm1
+        '
+        Me.GroupForm1.Location = New System.Drawing.Point(3, 3357)
+        Me.GroupForm1.Name = "GroupForm1"
+        Me.GroupForm1.Size = New System.Drawing.Size(628, 553)
+        Me.GroupForm1.TabIndex = 7
         '
         'MainApp
         '
@@ -213,6 +210,7 @@ Partial Class MainApp
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MyContact"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -220,17 +218,17 @@ Partial Class MainApp
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents DashboardBtn As Button
     Friend WithEvents ExitBtn As Button
     Friend WithEvents ExportImportBtn As Button
     Friend WithEvents ContactBtn As Button
     Friend WithEvents GroupBtn As Button
     Friend WithEvents AboutBtn As Button
-    Friend WithEvents DashboardView1 As DashboardView
     Friend WithEvents ExportImportView1 As ExportImportView
     Friend WithEvents GroupsView1 As GroupsView
     Friend WithEvents AboutView1 As AboutView
     Friend WithEvents ContactsView1 As ContactsView
     Friend WithEvents ContactDetailView1 As ContactDetailView
-    Friend WithEvents ContactCreate1 As ContactCreate
+    Friend WithEvents ContactCreate1 As ContactForm
+    Friend WithEvents GroupForm1 As GroupForm
+    Friend WithEvents MyContact As Label
 End Class

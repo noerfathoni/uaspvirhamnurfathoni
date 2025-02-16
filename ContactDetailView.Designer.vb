@@ -54,9 +54,9 @@ Partial Class ContactDetailView
         Me.LabelX.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX.Location = New System.Drawing.Point(8, 65)
         Me.LabelX.Name = "LabelX"
-        Me.LabelX.Size = New System.Drawing.Size(112, 28)
+        Me.LabelX.Size = New System.Drawing.Size(132, 28)
         Me.LabelX.TabIndex = 3
-        Me.LabelX.Text = "First Name"
+        Me.LabelX.Text = "Nama Depan"
         '
         'FirstNameLabel
         '
@@ -64,9 +64,9 @@ Partial Class ContactDetailView
         Me.FirstNameLabel.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FirstNameLabel.Location = New System.Drawing.Point(189, 65)
         Me.FirstNameLabel.Name = "FirstNameLabel"
-        Me.FirstNameLabel.Size = New System.Drawing.Size(112, 28)
+        Me.FirstNameLabel.Size = New System.Drawing.Size(27, 28)
         Me.FirstNameLabel.TabIndex = 4
-        Me.FirstNameLabel.Text = "First Name"
+        Me.FirstNameLabel.Text = "..."
         '
         'LastNameLabel
         '
@@ -74,9 +74,9 @@ Partial Class ContactDetailView
         Me.LastNameLabel.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LastNameLabel.Location = New System.Drawing.Point(189, 108)
         Me.LastNameLabel.Name = "LastNameLabel"
-        Me.LastNameLabel.Size = New System.Drawing.Size(112, 28)
+        Me.LastNameLabel.Size = New System.Drawing.Size(27, 28)
         Me.LastNameLabel.TabIndex = 6
-        Me.LastNameLabel.Text = "First Name"
+        Me.LastNameLabel.Text = "..."
         '
         'Label4
         '
@@ -84,9 +84,9 @@ Partial Class ContactDetailView
         Me.Label4.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(8, 108)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(110, 28)
+        Me.Label4.Size = New System.Drawing.Size(158, 28)
         Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Last Name"
+        Me.Label4.Text = "Nama Belakang"
         '
         'NumberLabel
         '
@@ -94,9 +94,9 @@ Partial Class ContactDetailView
         Me.NumberLabel.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NumberLabel.Location = New System.Drawing.Point(189, 156)
         Me.NumberLabel.Name = "NumberLabel"
-        Me.NumberLabel.Size = New System.Drawing.Size(112, 28)
+        Me.NumberLabel.Size = New System.Drawing.Size(27, 28)
         Me.NumberLabel.TabIndex = 8
-        Me.NumberLabel.Text = "First Name"
+        Me.NumberLabel.Text = "..."
         '
         'Label6
         '
@@ -104,9 +104,9 @@ Partial Class ContactDetailView
         Me.Label6.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(8, 156)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(85, 28)
+        Me.Label6.Size = New System.Drawing.Size(73, 28)
         Me.Label6.TabIndex = 7
-        Me.Label6.Text = "Number"
+        Me.Label6.Text = "Nomor"
         '
         'CreatedAtLabel
         '
@@ -114,9 +114,9 @@ Partial Class ContactDetailView
         Me.CreatedAtLabel.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CreatedAtLabel.Location = New System.Drawing.Point(189, 254)
         Me.CreatedAtLabel.Name = "CreatedAtLabel"
-        Me.CreatedAtLabel.Size = New System.Drawing.Size(112, 28)
+        Me.CreatedAtLabel.Size = New System.Drawing.Size(27, 28)
         Me.CreatedAtLabel.TabIndex = 12
-        Me.CreatedAtLabel.Text = "First Name"
+        Me.CreatedAtLabel.Text = "..."
         '
         'Label8
         '
@@ -134,9 +134,9 @@ Partial Class ContactDetailView
         Me.EmailLabel.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailLabel.Location = New System.Drawing.Point(189, 206)
         Me.EmailLabel.Name = "EmailLabel"
-        Me.EmailLabel.Size = New System.Drawing.Size(112, 28)
+        Me.EmailLabel.Size = New System.Drawing.Size(27, 28)
         Me.EmailLabel.TabIndex = 10
-        Me.EmailLabel.Text = "First Name"
+        Me.EmailLabel.Text = "..."
         '
         'Label10
         '
@@ -144,9 +144,9 @@ Partial Class ContactDetailView
         Me.Label10.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(8, 206)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(63, 28)
+        Me.Label10.Size = New System.Drawing.Size(57, 28)
         Me.Label10.TabIndex = 9
-        Me.Label10.Text = "Email"
+        Me.Label10.Text = "Grup"
         '
         'UpdatedAtLabel
         '
@@ -154,9 +154,9 @@ Partial Class ContactDetailView
         Me.UpdatedAtLabel.Font = New System.Drawing.Font("Nunito SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UpdatedAtLabel.Location = New System.Drawing.Point(189, 302)
         Me.UpdatedAtLabel.Name = "UpdatedAtLabel"
-        Me.UpdatedAtLabel.Size = New System.Drawing.Size(112, 28)
+        Me.UpdatedAtLabel.Size = New System.Drawing.Size(27, 28)
         Me.UpdatedAtLabel.TabIndex = 14
-        Me.UpdatedAtLabel.Text = "First Name"
+        Me.UpdatedAtLabel.Text = "..."
         '
         'Label12
         '
@@ -170,15 +170,17 @@ Partial Class ContactDetailView
         '
         'BackToContactBtn
         '
-        Me.BackToContactBtn.BackColor = System.Drawing.Color.White
+        Me.BackToContactBtn.BackColor = System.Drawing.Color.Firebrick
+        Me.BackToContactBtn.FlatAppearance.BorderSize = 0
         Me.BackToContactBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BackToContactBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackToContactBtn.ForeColor = System.Drawing.Color.White
         Me.BackToContactBtn.Location = New System.Drawing.Point(13, 392)
         Me.BackToContactBtn.Name = "BackToContactBtn"
         Me.BackToContactBtn.Size = New System.Drawing.Size(90, 33)
         Me.BackToContactBtn.TabIndex = 15
         Me.BackToContactBtn.Text = "Kembali"
-        Me.BackToContactBtn.UseVisualStyleBackColor = True
+        Me.BackToContactBtn.UseVisualStyleBackColor = False
         '
         'ContactDetailView
         '

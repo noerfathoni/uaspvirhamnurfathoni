@@ -24,12 +24,12 @@ Partial Class ContactsView
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CreateBtn = New System.Windows.Forms.Button()
         Me.EditBtn = New System.Windows.Forms.Button()
         Me.DeleteBtn = New System.Windows.Forms.Button()
         Me.DetailContactBtn = New System.Windows.Forms.Button()
         Me.SearchForm = New System.Windows.Forms.RichTextBox()
         Me.SearchBtn = New System.Windows.Forms.Button()
+        Me.CreateBtn = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,23 +58,13 @@ Partial Class ContactsView
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Kontak"
         '
-        'CreateBtn
-        '
-        Me.CreateBtn.BackColor = System.Drawing.Color.White
-        Me.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CreateBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CreateBtn.Location = New System.Drawing.Point(10, 49)
-        Me.CreateBtn.Name = "CreateBtn"
-        Me.CreateBtn.Size = New System.Drawing.Size(90, 33)
-        Me.CreateBtn.TabIndex = 2
-        Me.CreateBtn.Text = "Tambah"
-        Me.CreateBtn.UseVisualStyleBackColor = False
-        '
         'EditBtn
         '
-        Me.EditBtn.BackColor = System.Drawing.Color.White
+        Me.EditBtn.BackColor = System.Drawing.Color.DarkOrange
+        Me.EditBtn.FlatAppearance.BorderSize = 0
         Me.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EditBtn.ForeColor = System.Drawing.Color.White
         Me.EditBtn.Location = New System.Drawing.Point(106, 49)
         Me.EditBtn.Name = "EditBtn"
         Me.EditBtn.Size = New System.Drawing.Size(90, 33)
@@ -84,9 +74,11 @@ Partial Class ContactsView
         '
         'DeleteBtn
         '
-        Me.DeleteBtn.BackColor = System.Drawing.Color.White
+        Me.DeleteBtn.BackColor = System.Drawing.Color.Firebrick
+        Me.DeleteBtn.FlatAppearance.BorderSize = 0
         Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DeleteBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteBtn.ForeColor = System.Drawing.Color.White
         Me.DeleteBtn.Location = New System.Drawing.Point(202, 49)
         Me.DeleteBtn.Name = "DeleteBtn"
         Me.DeleteBtn.Size = New System.Drawing.Size(90, 33)
@@ -96,9 +88,11 @@ Partial Class ContactsView
         '
         'DetailContactBtn
         '
-        Me.DetailContactBtn.BackColor = System.Drawing.Color.White
+        Me.DetailContactBtn.BackColor = System.Drawing.Color.DarkViolet
+        Me.DetailContactBtn.FlatAppearance.BorderSize = 0
         Me.DetailContactBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DetailContactBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DetailContactBtn.ForeColor = System.Drawing.Color.White
         Me.DetailContactBtn.Location = New System.Drawing.Point(298, 49)
         Me.DetailContactBtn.Name = "DetailContactBtn"
         Me.DetailContactBtn.Size = New System.Drawing.Size(90, 33)
@@ -108,6 +102,7 @@ Partial Class ContactsView
         '
         'SearchForm
         '
+        Me.SearchForm.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.SearchForm.Location = New System.Drawing.Point(10, 96)
         Me.SearchForm.Name = "SearchForm"
         Me.SearchForm.Size = New System.Drawing.Size(515, 33)
@@ -116,15 +111,34 @@ Partial Class ContactsView
         '
         'SearchBtn
         '
-        Me.SearchBtn.BackColor = System.Drawing.Color.White
+        Me.SearchBtn.BackColor = System.Drawing.Color.DodgerBlue
+        Me.SearchBtn.FlatAppearance.BorderSize = 0
         Me.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SearchBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchBtn.ForeColor = System.Drawing.Color.White
         Me.SearchBtn.Location = New System.Drawing.Point(528, 96)
         Me.SearchBtn.Name = "SearchBtn"
         Me.SearchBtn.Size = New System.Drawing.Size(90, 33)
         Me.SearchBtn.TabIndex = 7
         Me.SearchBtn.Text = "Cari"
         Me.SearchBtn.UseVisualStyleBackColor = False
+        '
+        'CreateBtn
+        '
+        Me.CreateBtn.BackColor = System.Drawing.Color.DodgerBlue
+        Me.CreateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.CreateBtn.FlatAppearance.BorderSize = 0
+        Me.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CreateBtn.Font = New System.Drawing.Font("Nunito SemiBold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CreateBtn.ForeColor = System.Drawing.Color.White
+        Me.CreateBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.CreateBtn.Location = New System.Drawing.Point(10, 49)
+        Me.CreateBtn.Name = "CreateBtn"
+        Me.CreateBtn.Size = New System.Drawing.Size(90, 33)
+        Me.CreateBtn.TabIndex = 2
+        Me.CreateBtn.Text = "Tambah"
+        Me.CreateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.CreateBtn.UseVisualStyleBackColor = False
         '
         'ContactsView
         '

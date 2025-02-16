@@ -17,12 +17,9 @@ Public Class MainApp
         End If
     End Sub
 
-    Private Sub DashboardBtn_Click(sender As Object, e As EventArgs) Handles DashboardBtn.Click
-        DashboardView1.BringToFront()
-    End Sub
-
     Private Sub ContactBtn_Click(sender As Object, e As EventArgs) Handles ContactBtn.Click
         ContactsView1.BringToFront()
+        ContactsView1.LoadContactDataTable()
     End Sub
 
     Private Sub GroupBtn_Click(sender As Object, e As EventArgs) Handles GroupBtn.Click

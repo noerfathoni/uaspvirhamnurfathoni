@@ -131,10 +131,10 @@
     <Compile Include="AboutView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ContactCreate.Designer.vb">
-      <DependentUpon>ContactCreate.vb</DependentUpon>
+    <Compile Include="ContactForm.Designer.vb">
+      <DependentUpon>ContactForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="ContactCreate.vb">
+    <Compile Include="ContactForm.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ContactDetailView.Designer.vb">
@@ -160,6 +160,12 @@
       <DependentUpon>ExportImportView.vb</DependentUpon>
     </Compile>
     <Compile Include="ExportImportView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupForm.Designer.vb">
+      <DependentUpon>GroupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GroupForm.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GroupsView.Designer.vb">
@@ -195,8 +201,8 @@
     <EmbeddedResource Include="AboutView.resx">
       <DependentUpon>AboutView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ContactCreate.resx">
-      <DependentUpon>ContactCreate.vb</DependentUpon>
+    <EmbeddedResource Include="ContactForm.resx">
+      <DependentUpon>ContactForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContactDetailView.resx">
       <DependentUpon>ContactDetailView.vb</DependentUpon>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExportImportView.resx">
       <DependentUpon>ExportImportView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupForm.resx">
+      <DependentUpon>GroupForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupsView.resx">
       <DependentUpon>GroupsView.vb</DependentUpon>
@@ -235,6 +244,21 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-regular-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
